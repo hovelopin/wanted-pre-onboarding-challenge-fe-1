@@ -1,10 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import {
+  LoginIdInput,
+  LoginPwInput,
+  LoginRegisterBtn,
+  LoginSubmitBtn,
+  LoginTitle,
+  LoginWrapper,
+} from "./LoginStyle";
 
 const Login = () => {
   return (
-    <div>
-      <h3>로그인입니다.</h3>
-    </div>
+    <LoginWrapper>
+      <LoginTitle>로그인</LoginTitle>
+      <LoginIdInput />
+      <LoginPwInput />
+      <LoginSubmitBtn>로그인</LoginSubmitBtn>
+      <Link to="/auth/register">
+        <LoginRegisterBtn>회원가입</LoginRegisterBtn>
+      </Link>
+    </LoginWrapper>
   );
 };
 

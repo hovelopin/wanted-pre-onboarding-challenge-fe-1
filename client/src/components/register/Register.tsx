@@ -1,10 +1,28 @@
 import React from "react";
+import {
+  EmailInput,
+  EmailTitle,
+  Title,
+  RegisterWrapper,
+  PasswordTitle,
+  PasswordInput,
+  SubmitBtn,
+  CheckPasswordInput,
+  CheckPasswordTitle,
+} from "./RegisterStyle";
 
 const Register = () => {
   return (
-    <div>
-      <h3>회원가입 입니다.</h3>
-    </div>
+    <RegisterWrapper>
+      <Title>회원가입</Title>
+      <EmailTitle>이메일</EmailTitle>
+      <EmailInput />
+      <PasswordTitle>비밀번호</PasswordTitle>
+      <PasswordInput />
+      <CheckPasswordTitle>비밀번호 확인</CheckPasswordTitle>
+      <CheckPasswordInput />
+      <SubmitBtn>확인</SubmitBtn>
+    </RegisterWrapper>
   );
 };
 
