@@ -1,4 +1,26 @@
 {
   "todos": [],
-  "users": []
+  "users": [
+    {
+      "email": "aa@aa.com",
+      "password": "123123123",
+      "id": "TXhwvmMejFWHvSI0VNC4e",
+      "createdAt": "2022-08-03T05:59:24.780Z",
+      "updatedAt": "2022-08-03T05:59:24.780Z"
+    },
+    {
+      "email": "aaaa@aaaa.com",
+      "password": "abc123!!!",
+      "id": "22BjHNZQj8lYpZq0LqkxI",
+      "createdAt": "2022-08-03T06:08:18.359Z",
+      "updatedAt": "2022-08-03T06:08:18.359Z"
+    },
+    {
+      "email": "bbbb@bbbb.com",
+      "password": "abc123!!!",
+      "id": "QBpzQp02QbKDGWwPKJsyl",
+      "createdAt": "2022-08-03T06:11:04.193Z",
+      "updatedAt": "2022-08-03T06:11:04.193Z"
+    }
+  ]
 }

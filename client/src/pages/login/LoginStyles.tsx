@@ -26,9 +26,17 @@ const LoginIdInput = styled.input.attrs({
   font-size: 16px;
 `;
 
-const LoginPwInput = styled(LoginIdInput).attrs({
+const LoginPwInput = styled.input.attrs({
   placeholder: "비밀번호를 입력해주세요",
+  type: "password",
 })`
+  display: block;
+  width: 340px;
+  height: 54px;
+  border-radius: 3px;
+  border: 1px solid rgb(96, 126, 170);
+  padding-left: 8px;
+  font-size: 16px;
   margin-bottom: 20px;
 `;
 
