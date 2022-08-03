@@ -31,6 +31,8 @@ const Login = () => {
   const handleClickLogin = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
+    e.preventDefault();
+
     axios.post("http://localhost:8080/users/login", user).then((res) => {
       const { token } = res.data;
       localStorage.setItem("token", token);
@@ -38,19 +40,18 @@ const Login = () => {
     });
   };
 
-  // Error : enter를 눌렀을때 로그인 버튼을 눌러서 홈으로 이동시켜야되는데 작동을 안함
   return (
-    <LoginWrapper>
-      <LoginTitle>로그인</LoginTitle>
-      <LoginIdInput name="email" onChange={handleChangeUserState} />
-      <LoginPwInput name="password" onChange={handleChangeUserState} />
-      <LoginSubmitBtn type="submit" onClick={handleClickLogin}>
-        로그인
-      </LoginSubmitBtn>
-      <Link to="/auth/register">
-        <LoginRegisterBtn type="button">회원가입</LoginRegisterBtn>
-      </Link>
-    </LoginWrapper>
+    <form>
+      <LoginWrapper>
+        <LoginTitle>로그인</LoginTitle>
+        <LoginIdInput name="email" onChange={handleChangeUserState} />
+        <LoginPwInput name="password" onChange={handleChangeUserState} />
+        <LoginSubmitBtn onClick={handleClickLogin}>로그인</LoginSubmitBtn>
+        <Link to="/auth/register">
+          <LoginRegisterBtn>회원가입</LoginRegisterBtn>
+        </Link>
+      </LoginWrapper>
+    </form>
   );
 };
 
