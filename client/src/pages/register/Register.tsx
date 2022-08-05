@@ -22,6 +22,7 @@ const Register = () => {
     email: "",
     password: "",
   });
+
   const navigate = useNavigate();
 
   const handleClickRegister = (e: React.FormEvent<HTMLFormElement>) => {
