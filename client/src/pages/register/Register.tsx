@@ -1,6 +1,6 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import customAxios from "../../api/customAxios";
 import { TUserState } from "../../types/userAuthTypes";
 import { validateEmail, validatePassword } from "../../utils/validation";
 
@@ -32,7 +32,7 @@ const Register = () => {
       alert("아이디 또는 비밀번호 형식이 맞지 않습니다.");
     }
 
-    axios.post("http://localhost:8080/users/create", user).then((res) => {
+    customAxios.post("/users/create", user).then((res) => {
       alert("회원가입에 성공했습니다.");
       navigate("/auth/login");
     });

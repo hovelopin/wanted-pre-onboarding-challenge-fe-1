@@ -27,7 +27,7 @@ const TodoCreate = () => {
   };
 
   const handleCreateTodo = () => {
-    axios.post("http://localhost:8080/todos", todos, {
+    axios.post("/todos", todos, {
       headers: {
         Authorization: `${localStorage.getItem("token")}`,
       },

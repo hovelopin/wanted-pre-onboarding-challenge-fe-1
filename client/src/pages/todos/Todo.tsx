@@ -9,7 +9,7 @@ const Todo = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/todos", {
+      .get("/todos", {
         headers: {
           Authorization: `${localStorage.getItem("token")}`,
         },

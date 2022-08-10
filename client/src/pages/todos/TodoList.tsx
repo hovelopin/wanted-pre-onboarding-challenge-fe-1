@@ -34,7 +34,7 @@ const TodoList = ({ todo, index }: any) => {
   // CREATE만 자동으로 업데이트가 되는데 그 차이를 모르겠다 로직은 비슷한거 같은데 왜 얘는 업데이트가 안되는걸까
   // 추측으로는 Todo가 뿌려주는 데이터쪽인데 그 쪽의 상태가 변경이 안되서 그런 것 같음
   const handleUpdateTodo = (id: string) => {
-    axios.put(`http://localhost:8080/todos/${todo.id}`, updateData, {
+    axios.put(`/todos/${todo.id}`, updateData, {
       headers: {
         Authorization: `${localStorage.getItem("token")}`,
       },
@@ -44,7 +44,7 @@ const TodoList = ({ todo, index }: any) => {
 
   // ERROR : 상태가 변한것이 없어서 새로고침을 해야지 데이터가 삭제됨
   const handleRemoveTodo = (id: string) => {
-    axios.delete(`http://localhost:8080/todos/${id}`, {
+    axios.delete(`/todos/${id}`, {
       headers: {
         Authorization: `${localStorage.getItem("token")}`,
       },
