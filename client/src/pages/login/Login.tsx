@@ -1,6 +1,6 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import customAxios from "../../api/customAxios";
 import { TUserState } from "../../types/userAuthTypes";
 import {
   LoginIdInput,
@@ -33,7 +33,7 @@ const Login = () => {
   ) => {
     e.preventDefault();
 
-    customAxios.post("/users/login", user).then((res) => {
+    axios.post("http://localhost:8080/users/login", user).then((res) => {
       const { token } = res.data;
       localStorage.setItem("token", token);
       navigate("/");
